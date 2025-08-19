@@ -1,0 +1,449 @@
+// Sourcing Agents Landing - Custom Animations and Styles
+// المحافظة على نظام الألوان الموجود مع إضافة تحسينات للحركات
+
+/* ======================
+   Button Hover Effects 
+   ====================== */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-primary {
+  &:hover {
+    box-shadow: 0 8px 25px rgba(89, 227, 167, 0.4);
+  }
+}
+
+/* ======================
+   Service Cards Animations
+   ====================== */
+
+.service-card {
+  border: 1px solid transparent;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  &:hover {
+    border-color: rgba(89, 227, 167, 0.2);
+    transform: translateY(-10px) scale(1.02);
+    
+    .service-icon {
+      svg {
+        animation: pulse-rotate 0.6s ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes pulse-rotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* ======================
+   Feature Items
+   ====================== */
+
+.feature-item {
+  .feature-icon {
+    transition: all 0.3s ease;
+    
+    svg {
+      transition: all 0.3s ease;
+    }
+    
+    &:hover {
+      svg {
+        transform: scale(1.1);
+        color: #45c487 !important; // Slightly darker shade of primary
+      }
+    }
+  }
+}
+
+/* ======================
+   Country Cards
+   ====================== */
+
+.country-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    .country-flag {
+      animation: flag-wave 0.6s ease-in-out;
+    }
+  }
+}
+
+@keyframes flag-wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+/* ======================
+   Shipping Cards
+   ====================== */
+
+.shipping-card {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    
+    .shipping-icon {
+      svg {
+        animation: shipping-bounce 0.6s ease-in-out;
+      }
+    }
+  }
+}
+
+@keyframes shipping-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ======================
+   Header Enhancements
+   ====================== */
+
+.header-area {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+  
+  .main-menu {
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      
+      li {
+        margin: 0 15px;
+        
+        a {
+          position: relative;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          color: #333;
+          font-weight: 500;
+          padding: 10px 15px;
+          border-radius: 25px;
+          display: block;
+          
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #59e3a7;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+          }
+          
+          &:hover {
+            color: #59e3a7;
+            background-color: rgba(89, 227, 167, 0.1);
+            
+            &:before {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ======================
+   Hero Section Enhancements
+   ====================== */
+
+.hero-area {
+  position: relative;
+  overflow: hidden;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(89, 227, 167, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-title {
+    font-weight: 700;
+    line-height: 1.2;
+    
+    span {
+      position: relative;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background-color: rgba(89, 227, 167, 0.3);
+        z-index: -1;
+        transform: skew(-15deg);
+      }
+    }
+  }
+}
+
+/* ======================
+   CTA Section Enhancements
+   ====================== */
+
+.cta-area {
+  background: linear-gradient(135deg, $primary 0%, #45c487 100%);
+  position: relative;
+  overflow: hidden;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    animation: grain-move 20s linear infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes grain-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100px, -100px);
+  }
+}
+
+/* ======================
+   Footer Enhancements
+   ====================== */
+
+.footer-area {
+  .widget-links {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      margin-bottom: 8px;
+      
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        
+        &:hover {
+          color: $primary;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+/* ======================
+   Section Spacing Classes
+   ====================== */
+
+.section-pt-140 {
+  padding-top: 140px;
+}
+
+.section-pb-140 {
+  padding-bottom: 140px;
+}
+
+.section-pt-100 {
+  padding-top: 100px;
+}
+
+.section-pb-100 {
+  padding-bottom: 100px;
+}
+
+.section-pt-70 {
+  padding-top: 70px;
+}
+
+.section-pb-70 {
+  padding-bottom: 70px;
+}
+
+.section-pb-40 {
+  padding-bottom: 40px;
+}
+
+/* ======================
+   Responsive Adjustments
+   ====================== */
+
+@media (max-width: 991.98px) {
+  .hero-area {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+      .btn {
+        margin-bottom: 15px;
+        width: 100%;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  .service-card {
+    margin-bottom: 30px;
+  }
+  
+  .section-pt-140 {
+    padding-top: 80px;
+  }
+  
+  .section-pb-140 {
+    padding-bottom: 80px;
+  }
+  
+  .section-pt-100 {
+    padding-top: 60px;
+  }
+  
+  .section-pb-100 {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-area {
+    .hero-title {
+      font-size: 2rem;
+    }
+  }
+  
+  .country-card {
+    margin-bottom: 20px;
+  }
+  
+  .shipping-card {
+    margin-bottom: 20px;
+  }
+  
+  .cta-area {
+    .cta-buttons {
+      .btn {
+        width: 100%;
+        margin-bottom: 15px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/* ======================
+   Scroll Behavior
+   ====================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ======================
+   Loading Animation (Optional)
+   ====================== */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================
+   Custom Scrollbar (Webkit)
+   ====================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #45c487;
+}
