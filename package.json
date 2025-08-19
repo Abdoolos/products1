@@ -3,24 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@axetroy/react-download": "^1.1.1",
     "autoprefixer": "10.4.5",
-    "disqus-react": "^1.1.1",
+    "disqus-react": "^1.1.5",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.540.0",
     "parallax-js": "^3.1.0",
     "react": "^18.2.0",
-    "react-countup": "^4.3.3",
+    "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-hook-form": "6.14.2",
+    "react-hook-form": "^7.48.2",
     "react-mailchimp-subscribe": "^2.1.3",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^6.8.1",
     "react-scripts": "^5.0.1",
     "react-visibility-sensor": "^5.1.1",
-    "reactstrap": "^8.9.0",
+    "reactstrap": "^9.2.2",
     "sass": "^1.58.3",
-    "swiper": "^6.6.2"
+    "swiper": "^11.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -62,5 +61,11 @@
   },
   "resolutions": {
     "autoprefixer": "10.4.5"
+  },
+  "overrides": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
   }
 }

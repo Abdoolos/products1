@@ -1,14 +1,13 @@
 import { useEffect, useRef } from "react";
 import SectionTitle from "../../../components/section-title";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import Testimonial from "../../../components/testimonial";
 import HomeData from "../../../data/home.json";
-import SwiperCore, { Navigation } from "swiper";
 import Parallax from "parallax-js";
-
-SwiperCore.use([Navigation]);
 const TestimonialReverse = () => {
     const swiperOption = {
+        modules: [Navigation],
         loop: false,
         speed: 1000,
         slidesPerView: 1,
