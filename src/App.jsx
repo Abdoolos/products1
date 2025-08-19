@@ -31,43 +31,19 @@ const App = () => {
             <NavScrollTop>
                 <Routes>
                     {/* Norwegian Sourcing Agents Landing - Primary Route */}
-                    <Route
-                        path="/"
-                        element={<SourcingAgentsLanding />}
-                    />
+                    <Route path="/" element={<SourcingAgentsLanding />} />
                     {/* Original English Routes - Kept for reference */}
-                    <Route
-                        path="/original"
-                        element={<HomePage />}
-                    />
-                    <Route
-                        path="/about"
-                        element={<AboutPage />}
-                    />
-                    <Route
-                        path="/service"
-                        element={<ServicePage />}
-                    />
+                    <Route path="/original" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/service" element={<ServicePage />} />
                     <Route
                         path="/service-details/:id"
                         element={<ServiceDetails />}
                     />
-                    <Route
-                        path="/team"
-                        element={<TeamPage />}
-                    />
-                    <Route
-                        path="/faq"
-                        element={<FaqPage />}
-                    />
-                    <Route
-                        path="/contact"
-                        element={<ContactPage />}
-                    />
-                    <Route
-                        path="/blog"
-                        element={<BlogPage />}
-                    />
+                    <Route path="/team" element={<TeamPage />} />
+                    <Route path="/faq" element={<FaqPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/blog" element={<BlogPage />} />
                     <Route
                         path="/blog-left-sidebar"
                         element={<BlogLeftSidebarPage />}
@@ -80,22 +56,10 @@ const App = () => {
                         path="/blog-details/:id"
                         element={<BlogDetailsPage />}
                     />
-                    <Route
-                        path="/author/:author"
-                        element={<BlogAuthor />}
-                    />
-                    <Route
-                        path="/date/:date"
-                        element={<BlogDate />}
-                    />
-                    <Route
-                        path="/tag/:slug"
-                        element={<BlogTag />}
-                    />
-                    <Route
-                        path="/category/:slug"
-                        element={<BlogCategory />}
-                    />
+                    <Route path="/author/:author" element={<BlogAuthor />} />
+                    <Route path="/date/:date" element={<BlogDate />} />
+                    <Route path="/tag/:slug" element={<BlogTag />} />
+                    <Route path="/category/:slug" element={<BlogCategory />} />
                 </Routes>
             </NavScrollTop>
         </Router>
